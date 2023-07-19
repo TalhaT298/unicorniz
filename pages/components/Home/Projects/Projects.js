@@ -92,7 +92,7 @@ const Projects = () => {
             className="w-full md:rounded-3xl rounded-[2.2rem] shadow-2xl shadow-[#b8b1b1]" alt="cover"
           />
           <div className="mt-[20px]">
-            <h4 className="text-[20px] font-semibold">Business Management App</h4>
+            <h4 className="text-[20px] font-semibold">Island Venture</h4>
             <p className="text-[16px] text-[#dbdbdb]"></p>
           </div>
         </div>
