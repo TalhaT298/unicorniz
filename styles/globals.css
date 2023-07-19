@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  overflow-x: hidden;
+  box-sizing: border-box;
+
+}
+.about{
+position: absolute;
+  width: 1527px;
+  height: 769px;
+  left: -920px;
+  top: 780px;
+
+  background: rgba(30, 30, 30, 0.4);
+  filter: blur(196px);
+}
+
+.services{
+position: absolute;
+  width: 1527px;
+  height: 769px;
+  left: 579px;
+  top: 1488px;
+
+  background: rgba(30, 30, 30, 0.4);
+  filter: blur(196px);
+  }
+  
+.uText{
+  -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.slider-controler .swiper-button-next {
+  position: absolute;
+  left: 99% !important;
+  top: 10% !important;
+  transform: translateX(-95%) !important;
+}
+
+.slider-controler .swiper-button-prev {
+  left: 92% !important;
+  top: 10% !important;
+  transform: translateX(-30%) !important;
+}
+
+.slider-controler .slider-arrow {
+  background: transparent;
+  width: 3.5vw;
+  height: 3.5vw;
+  border-radius: 50%;
+}
+
+@media only screen and (min-width: 980px) {
+  .slider-controler .swiper-button-next {
+      position: absolute;
+      left: 99% !important;
+      top: 5% !important;
+      transform: translateX(-95%) !important;
+
+    }
+  
+    .slider-controler .swiper-button-prev {
+      left: 92% !important;
+      top: 5% !important;
+      transform: translateX(-30%) !important;
+    }
+}
+.slider-controler .slider-arrow::after {
+  content: '';
+}
+
+.carousel {
+  width: 100%;
+  height: 350px;
+  position: relative;
+}
+
+.card {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: -20px;
+  left: 0;
+  margin: auto;
+  width: 22.78vw;
+  height: 22.78vw;
+  object-fit: cover;
+  cursor: pointer;
+  z-index: 0;
+  opacity: 0;
+  transition: 500ms;
+}
+
+.card--active {
+  opacity: 1;
+  z-index: 99;
+}
+
+.card--left {
+  transform: translateX(-116%);
+  transition: 500ms;
+  opacity: 0.3;
+}
+
+.card--right {
+  transform: translateX(116%);
+  transition: 500ms;
+  opacity: 0.3;
+}
