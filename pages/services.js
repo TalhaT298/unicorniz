@@ -29,7 +29,7 @@ const Services = () => {
 				<hr className="border  md:mt-[127px] mt-10 border-[#979797] -mx-5 md:mx-0" />
 				<div className=" md:grid grid-cols-2 gap-5 my-10">
 					<h1 className="sm:text-[80px] text-center text-[30px] md:leading-[152px] sm:pr-28 pr-44 pb-10 sm:pb-0 font-semibold tracking-[2%]">
-						UI/UX Design<span className="text-[#FF7E21]">.</span>
+						AR/VR<span className="text-[#FF7E21]">.</span>
 					</h1>
 					<div className="md:p-[38px] text-sm sm:text-base ">
 						<p >
@@ -44,15 +44,15 @@ const Services = () => {
 				</div>
 				<div className="md:text-[60px] text-2xl text-[#979797] leading-[114px] font-semibold tracking-[2%]">
 					<hr className="border border-[#979797] -mx-5 md:mx-0" />
-					<h1 className="">Branding</h1>
+					<h1 className="">IT Services</h1>
 					<hr className="border border-[#979797] -mx-5 md:mx-0" />
-					<h1 className="">Development</h1>
+					<h1 className="">Digital Marketing</h1>
 					<hr className="border border-[#979797] -mx-5 md:mx-0" />
 					<h1 className="">Graphic Design</h1>
 					<hr className="border border-[#979797] -mx-5 md:mx-0" />
 					<h1 className="">SEO</h1>
 					<hr className="border border-[#979797] -mx-5 md:mx-0" />
-					<h1 className="">Visual Design</h1>
+					<h1 className="">UI/UX Design</h1>
 					<hr className="border border-[#979797] -mx-5 md:mx-0" />
 				</div>
 			</div>

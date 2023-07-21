@@ -53,7 +53,7 @@ import Image from "next/image";
 import coverImage from "../../../../assets/Album Cover.png";
 const Projects = () => {
   return (
-    <div className="md:mt-[90px] mt-[40px] md:ml-[23px] md:mr-[10px]">
+    <div className="md:mt-[90px] mt-[40px] md:mx-[10px]">
       <div className="flex justify-between items-center">
         <h3 className="uppercase text-[40px]">
           Projects <hr className="w-16 border border-black" />

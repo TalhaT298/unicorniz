@@ -5,7 +5,7 @@ import img2 from "../../../../assets/Image (1).png";
 import quotes from "../../../../assets/Quotes.png";
 
 const Testimonial = () => {
-  const [index, setIndex] = useState(0);
+	const [index, setIndex] = useState(0);
 
 	const mod = (n, m) => {
 		let result = n % m;
@@ -34,12 +34,12 @@ const Testimonial = () => {
 	];
 	return (
 		<div className="md:mt-[90px] mt-[40px]">
-			<div className="flex justify-between items-center md:ml-[23px] md:mr-[10px]">
-				<h3 className="uppercase sm:text-[40px] text-[20px] pl-4 lg:pl-0 md:pl-0">
+			<div className="flex justify-between items-center md:mx-[10px]">
+				<h3 className="uppercase text-[40px] pl-4 lg:pl-0 md:pl-0">
 					Testimonials <hr className="w-16 border border-black" />
-					
+
 				</h3>
-				<p className="text-[#FF7E21] font-bold cursor-pointer text-xs">know More</p>
+				<p className="text-[#FF7E21] font-bold cursor-pointer">Know More</p>
 			</div>
 
 			<div className="carousel overflow-hidden">
@@ -83,7 +83,7 @@ const Testimonial = () => {
 			</div>
 
 			<div
-				className={`flex gap-5 w-[278px] mx-auto md:mb-[101px] mb-10  lg:mt-[5vw] mt-[10vw]`}>
+				className={`flex gap-5 w-[278px] mx-auto md:mb-[101px] mb-10 lg:mt-[5vw] mt-[10vw]`}>
 				<div className="flex items-center gap-1">
 					<span className="font-extrabold cursor-pointer">0{index + 1}</span>{" "}
 					<hr className="w-20 border border-black" />

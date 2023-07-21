@@ -51,26 +51,125 @@ const Projects = () => {
                 </div>
                 <div className="">
                   <h4 className="text-[2.28vw] ml-[4.16vw] -mb-[3.64vw] font-semibold">
-                    Sublime Islands
+                    {""}
                   </h4>
                   <Image src={img2} className="" />
                 </div>
+              </div>
+              <div className="flex gap-[27px]">
+                <div className="pt-0">
+                  <h3 className="font-semibold text-sm underline">
+                    Product Description
+                  </h3>
+                </div>
+                <p className=" w-full tracking-[2%] text-[16px]">
+                  Bringing the history of your brand to the forefront gives an
+                  emotional dimension to your visual identity, which is essential
+                  today more than ever in today's digital landscape. Bringing the
+                  history of your brand to the forefront gives an emotional dimension
+                  to your
+
+                  Bringing the history of your brand to the forefront gives an
+                  emotional dimension to your visual identity, which is essential
+                  today more than ever in today's digital landscape. Bringing the
+                  history of your brand to the forefront gives an emotional dimension
+                  to your
+                  Bringing the history of your brand to the forefront gives an
+                  emotional dimension to your visual identity, which is essential
+                  today more than ever in today's digital landscape. Bringing the
+                  history of your brand to the forefront gives an emotional dimension
+                  to your
+                </p>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="flex items-center gap-[5.2vw]">
                 <div className="">
+                  <h4 className="text-[2.28vw] text-3xl pb-5 ml-[4.16vw] -mb-[3.64vw] font-semibold">
+                    Sublime Islands
+                  </h4>
+                  <Image src={img} className="" />
+                </div>
+                <div className="">
                   <h4 className="text-[2.28vw] ml-[4.16vw] -mb-[3.64vw] font-semibold">
+                    {""}
+                  </h4>
+                  <Image src={img2} className="" />
+                </div>
+              </div>
+              <div className="flex gap-[27px]">
+                <div className="pt-0">
+                  <h3 className="font-semibold text-sm underline">
+                    Product Description
+                  </h3>
+                </div>
+                <p className=" w-full tracking-[2%] text-[16px]">
+                  Bringing the history of your brand to the forefront gives an
+                  emotional dimension to your visual identity, which is essential
+                  today more than ever in today's digital landscape. Bringing the
+                  history of your brand to the forefront gives an emotional dimension
+                  to your
+                </p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="flex items-center gap-[5.2vw]">
+                <div className="">
+                  <h4 className="text-[2.28vw] text-3xl pb-5 ml-[4.16vw] -mb-[3.64vw] font-semibold">
                     Island Venture
                   </h4>
                   <Image src={img} className="" />
                 </div>
                 <div className="">
                   <h4 className="text-[2.28vw] ml-[4.16vw] -mb-[3.64vw] font-semibold">
-                    Bhojan Mitra
+                    {""}
                   </h4>
                   <Image src={img2} className="" />
                 </div>
+              </div>
+              <div className="flex gap-[27px]">
+                <div className="pt-0">
+                  <h3 className="font-semibold text-sm underline">
+                  Product Description
+                  </h3>
+                </div>
+                <p className=" w-full tracking-[2%] text-[16px]">
+                  Bringing the history of your brand to the forefront gives an
+                  emotional dimension to your visual identity, which is essential
+                  today more than ever in today's digital landscape. Bringing the
+                  history of your brand to the forefront gives an emotional dimension
+                  to your
+                </p>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="flex items-center gap-[5.2vw]">
+                <div className="">
+                  <h4 className="text-[2.28vw] text-3xl pb-5 ml-[4.16vw] -mb-[3.64vw] font-semibold">
+                    Bhojan Mitra
+                  </h4>
+                  <Image src={img} className="" />
+                </div>
+                <div className="">
+                  <h4 className="text-[2.28vw] ml-[4.16vw] -mb-[3.64vw] font-semibold">
+                    {""}
+                  </h4>
+                  <Image src={img2} className="" />
+                </div>
+              </div>
+              <div className="flex gap-[27px]">
+                <div className="pt-0">
+                  <h3 className="font-semibold text-sm underline">
+                  Product Description
+                  </h3>
+                </div>
+                <p className=" w-full tracking-[2%] text-[16px]">
+                  Bringing the history of your brand to the forefront gives an
+                  emotional dimension to your visual identity, which is essential
+                  today more than ever in today's digital landscape. Bringing the
+                  history of your brand to the forefront gives an emotional dimension
+                  to your
+                </p>
               </div>
             </SwiperSlide>
             <div className="slider-controler">
@@ -82,20 +181,6 @@ const Projects = () => {
               </div>
             </div>
           </Swiper>
-        </div>
-        <div className=" flex gap-[27px]">
-          <div className="pt-12">
-            <h3 className="px-[27px] border-black border rounded-full md:text-[1.8vw] text-[4vw]">
-              UX/UI Design.
-            </h3>
-          </div>
-          <p className=" w-[396px] tracking-[2%]">
-            Bringing the history of your brand to the forefront gives an
-            emotional dimension to your visual identity, which is essential
-            today more than ever in today's digital landscape. Bringing the
-            history of your brand to the forefront gives an emotional dimension
-            to your
-          </p>
         </div>
       </div>
       {/* mobile */}
