@@ -1,14 +1,10 @@
-import { Manrope } from "next/font/google";
 import Head from "next/head";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import React, { useEffect, useState } from "react";
 import img from "../assets/Image (2).png";
 import img1 from "../assets/Image.png";
 import img2 from "../assets/Image (1).png";
-const manrope = Manrope({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-});
+
 const Team = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const slides = [
@@ -55,7 +51,7 @@ const Team = () => {
         Our Team <hr className="w-16 border border-black" />
       </h1>
       <div
-        className={` gap-[68px] px-3  lg:px-[124px] hidden lg:flex md:flex relative group lg:mt-56 mt-10 mb-7 lg:mb-24 ${manrope.className}`}
+        className={` gap-[68px] px-3  lg:px-[124px] hidden lg:flex md:flex relative group lg:mt-56 mt-10 mb-7 lg:mb-24`}
       >
         <div className="md:flex hidden lg:flex flex-col space-y-1 text-[12px]">
           <div className={border1}>

@@ -11,48 +11,47 @@ const Navbar = ({ loading, handleSubmit }) => {
 	const menuItems = (
 		<>
 			<Link href="/">
-				<li tabIndex={0} className=" cursor-pointer focus:text-black">
+				<li tabIndex={0} className=" cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold">
 					Home
 				</li>
 			</Link>
 			<Link href={"/services"}>
-				<li tabIndex={1} className=" cursor-pointer focus:text-black">
+				<li tabIndex={1} className=" cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold">
 					Services
 				</li>
 			</Link>
-			<Link href={"/project"}>
-				<li tabIndex={2} className=" cursor-pointer focus:text-black">
-					Project
+			<Link href={"/projects"}>
+				<li tabIndex={2} className=" cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold">
+					Projects
 				</li>
 			</Link>
 			<Link href={"/about"}>
-				<li tabIndex={3} className=" cursor-pointer focus:text-black">
+				<li tabIndex={3} className=" cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold">
 					About
 				</li>
 			</Link>
 			<Link href={"/team"}>
-				<li tabIndex={3} className=" cursor-pointer focus:text-black">
+				<li tabIndex={4} className=" cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold">
 					Team
 				</li>
 			</Link>
-			
 		</>
 	);
 
 	return (
 		<div className="flex justify-between lg:block relative">
-			<div className="flex justify-between border-b shadow-gray-400 shadow items-center h-16 w-full px-5">
+			<div className="flex justify-between border-b-2 border-zinc-200 items-center h-20 w-full px-5">
 				<Link href={"/"}>
 					<Image src={logo} priority alt="logo" className="h-12 w-full" />
-				</Link>{" "}
-				<ul className="lg:flex hidden  gap-12 text-[#7f7f7f]">{menuItems}</ul>
+				</Link>
+				<ul className="lg:flex hidden gap-12 text-slate-600 font-light text-xl">{menuItems}</ul>
 				{/* <PrimaryButton
 					classes={"lg:block hidden"}
 					disabledProps={loadin}
 					onClickProps={handleSubmit}>
 					Contact Us
 				</PrimaryButton> */}
-				<button className="lg:block hidden bg-black text-white w-32 h-12">
+				<button className="lg:block hidden bg-black text-white w-32 h-12 font-mono">
 					<Link href={"/contactus"}>Contact Us</Link>
 				</button>
 				<div className="lg:hidden block">
@@ -71,9 +70,8 @@ const Navbar = ({ loading, handleSubmit }) => {
 				</div>
 			</div>
 			<div
-				className={` ${
-					!hamburger ? "top-16 " : "top-[-400px]"
-				} ease-out transition-all duration-500 lg:hidden flex flex-col absolute right-2 p-3 rounded bg-slate-100 z-50`}>
+				className={` ${!hamburger ? "top-16 " : "top-[-400px]"
+					} ease-out transition-all duration-500 lg:hidden flex flex-col absolute right-2 p-3 rounded bg-slate-100 z-50`}>
 				<div className="">
 					{" "}
 					<ul
@@ -89,9 +87,9 @@ const Navbar = ({ loading, handleSubmit }) => {
 						className="px-8 py-3 bg-black lg:hidden block text-white">
 						Contact Us
 					</button> */}
-					<button className="px-8 py-3 bg-black lg:hidden block text-white">
-					<Link href={"/contactus"}>Contact Us</Link>
-				   </button>
+					<button className="px-8 py-3 bg-black lg:hidden block text-white font-mono">
+						<Link href={"/contactus"}>Contact Us</Link>
+					</button>
 				</div>
 			</div>
 		</div>

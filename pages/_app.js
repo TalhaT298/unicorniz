@@ -6,15 +6,16 @@ import Footer from "./components/SharedComponents/Footer/Footer";
 
 
 const poppins = Poppins({
-  weight: ['400','500','600', '700','800'],
+	weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 	subsets: ["latin"],
+	variable: '--font-poppins',
 });
 export default function App({ Component, pageProps }) {
 	return (
-		<main className={poppins.className}>
+		<main className={`${poppins.variable} font-poppins`}>
 			<Navbar />
-      <Component {...pageProps} />
-      <Footer/>
+			<Component {...pageProps} />
+			<Footer />
 		</main>
 	);
 }

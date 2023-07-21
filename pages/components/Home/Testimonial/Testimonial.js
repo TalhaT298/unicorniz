@@ -3,12 +3,7 @@ import React, { useEffect, useState } from "react";
 import img1 from "../../../../assets/Image.png";
 import img2 from "../../../../assets/Image (1).png";
 import quotes from "../../../../assets/Quotes.png";
-import { Manrope} from "next/font/google";
 
-const manrope = Manrope({
-	weight: ["400", "500", "600", "700"],
-	subsets: ["latin"],
-});
 const Testimonial = () => {
   const [index, setIndex] = useState(0);
 
@@ -88,7 +83,7 @@ const Testimonial = () => {
 			</div>
 
 			<div
-				className={`${manrope.className} flex gap-5 w-[278px] mx-auto md:mb-[101px] mb-10  lg:mt-[5vw] mt-[10vw]`}>
+				className={`flex gap-5 w-[278px] mx-auto md:mb-[101px] mb-10  lg:mt-[5vw] mt-[10vw]`}>
 				<div className="flex items-center gap-1">
 					<span className="font-extrabold cursor-pointer">0{index + 1}</span>{" "}
 					<hr className="w-20 border border-black" />
