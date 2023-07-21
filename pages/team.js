@@ -1,20 +1,16 @@
 import Head from "next/head";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import React, { useEffect, useState } from "react";
-import img from "../assets/Image (2).png";
-import img1 from "../assets/Image.png";
-import img2 from "../assets/Image (1).png";
+import img from "../assets/Image.png";
+import img1 from "../assets/Image (1).png";
+import img2 from "../assets/Image (2).png";
 
 const Team = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const slides = [
-    { image: img.src },
-    { image: img1.src },
-    { image: img2.src },
-    {
-      image:
-        "https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?cs=srgb&dl=pexels-tu%E1%BA%A5n-ki%E1%BB%87t-jr-1391498.jpg&fm=jpg",
-    },
+    { image: img.src, bio: "", name: "Dinesh Lal", designation: "CEO & Founder" },
+    { image: img1.src, bio: "", name: "M Vinod", designation: "COO & Founder" },
+    { image: img2.src, bio: "", name: "Sourav Paul", designation: "CTO" },
   ];
   const prevSlide = () => {
     const isFirst = currentIndex === 0;
@@ -28,18 +24,10 @@ const Team = () => {
     const newIndex = isLast ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
-  const border1 = `h-10 border-l-2   ${
-    currentIndex === 0 ? "border-black" : "border-slate-200"
-  }`;
-  const border2 = `h-10 border-l-2   ${
-    currentIndex === 1 ? "border-black" : "border-slate-200"
-  }`;
-  const border3 = `h-10 border-l-2   ${
-    currentIndex === 2 ? "border-black" : "border-slate-200"
-  }`;
-  const border4 = `h-10 border-l-2   ${
-    currentIndex === 3 ? "border-black" : "border-slate-200"
-  }`;
+
+  const border1 = `h-10 border-l-2 ${currentIndex === 0 ? "border-black" : "border-slate-200"}`;
+  const border2 = `h-10 border-l-2 ${currentIndex === 1 ? "border-black" : "border-slate-200"}`;
+  const border3 = `h-10 border-l-2 ${currentIndex === 2 ? "border-black" : "border-slate-200"}`;
 
   return (
     <div>
@@ -78,24 +66,13 @@ const Team = () => {
               03
             </span>{" "}
           </div>
-          <div tabIndex={2} className={border4}>
-            <span
-              onClick={() => setCurrentIndex(3)}
-              className="ml-1 cursor-pointer"
-            >
-              04
-            </span>{" "}
-          </div>
         </div>
         <div className="lg:h-[370px] w-full lg:grid grid-cols-2 bg-black text-white">
           <div className="py-8 px-9">
-            <h2 className="text-[40px]">Elsa Weimann</h2>
-            <h6 className="text-[18px] text-[#FF7E21]">UI DESIGNER</h6>
+            <h2 className="text-[40px]">{slides[currentIndex].name}</h2>
+            <h6 className="text-[18px] text-[#FF7E21]">{slides[currentIndex].designation}</h6>
             <p className="text-[24px] text-justify mt-5">
-              Aut totam quis sed ipsam enim. Saepe quam distinctio eaque. Est
-              eos assumenda esse. Natus ex consequatur sed distinctio sint
-              maiores optio. Quia ullam vel consequuntur. Excepturi dignissimos
-              sint.
+              {slides[currentIndex].bio}
             </p>
           </div>
           <div className="relative">
@@ -108,109 +85,75 @@ const Team = () => {
         </div>
         {/* Left Arrow */}
         <button
-          className={`hidden ${
-            currentIndex !== 0 && "group-hover:block"
-          } absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer`}
+          className={`hidden ${currentIndex !== 0 && "group-hover:block"
+            } absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer`}
         >
           <BsChevronCompactLeft onClick={prevSlide} size={30} />
         </button>
         {/* Right Arrow */}
         <button
-          className={`hidden ${
-            currentIndex !== slides.length - 1 && "group-hover:block"
-          } absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer`}
+          className={`hidden ${currentIndex !== slides.length - 1 && "group-hover:block"
+            } absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer`}
         >
           <BsChevronCompactRight onClick={nextSlide} size={30} />
         </button>
       </div>
-	  {/* mobile */}
+      {/* mobile */}
       <div className="lg:hidden md:hidden">
         <div>
-		<div className=" bg-base-100 flex py-10 px-4">
-          <div className="w-full">
-            <img
-              src="https://i.ibb.co/cT5zYqQ/userPic1.png"
-              alt="Movie"
-            />
-			<p className="text-center">Sarah Smith</p>
-			<p className="text-center text-sm text-amber-600">Founder</p>
-          </div>
-		  <div className="pt-6 px-2">
-            <img
-              src="https://i.ibb.co/0QQn697/Screenshot-56-removebg-preview.png"
-              alt="Movie"
-            />
-          </div>
-          <div className="w-2/3 pt-3">
-            <p>A good design is not only aesthetically pleasing,but also functional.It should be able to solve the problem.</p>
-          </div>
-        </div>
+          <div className="bg-base-100 flex py-10 px-4">
+            <div className="w-2/3 pt-12">
+              <p>A good design is not only aesthetically pleasing,but also functional.It should be able to solve the problem.</p>
+            </div>
 
-		<div className=" bg-base-100 flex  py-10 px-4">
-		<div className="w-2/3 pt-3">
-            <p>A good design is not only aesthetically pleasing,but also functional.It should be able to solve the problem.</p>
+            <div className="border-2 h-28 my-16 mx-6 border-slate-500">
+            </div>
+            <div className="w-full px-4">
+              <img
+                src={slides[0].image}
+                alt="Dinesh Lal CEO & Founder of Unicorniz Innovations"
+                className="rounded-md"
+              />
+              <p className="text-center font-semibold text-lg">Dinesh Lal</p>
+              <p className="text-center text-sm text-amber-600 font-bold">CEO & Founder</p>
+            </div>
           </div>
-          
-		  <div className="pt-6 px-2">
-            <img
-              src="https://i.ibb.co/0QQn697/Screenshot-56-removebg-preview.png"
-              alt="Movie"
-            />
-          </div>
-		  <div className="w-full">
-            <img
-              src="https://i.ibb.co/cT5zYqQ/userPic1.png"
-              alt="Movie"
-            />
-			<p className="text-center">Sarah Smith</p>
-			<p className="text-center text-sm text-amber-600">Founder</p>
-          </div>
-          
-        </div>
 
-		<div className=" bg-base-100 flex  py-10 px-4">
-          <div className="w-full">
-            <img
-              src="https://i.ibb.co/cT5zYqQ/userPic1.png"
-              alt="Movie"
-            />
-			<p className="text-center">Sarah Smith</p>
-			<p className="text-center text-sm text-amber-600">Founder</p>
+          <div className="bg-base-100 flex py-10 px-4">
+            <div className="w-full px-4">
+              <img
+                src={slides[1].image}
+                alt="M Vinod COO & Founder of Unicorniz Innovations"
+                className="rounded-md"
+              />
+              <p className="text-center font-semibold text-lg">M Vinod</p>
+              <p className="text-center text-sm text-amber-600 font-bold">COO & Founder</p>
+            </div>
+            <div className="border-2 h-28 my-16 mx-6 border-slate-500">
+            </div>
+            <div className="w-2/3 pt-12">
+              <p>A good design is not only aesthetically pleasing,but also functional.It should be able to solve the problem.</p>
+            </div>
           </div>
-		  <div className="pt-6 px-2">
-            <img
-              src="https://i.ibb.co/0QQn697/Screenshot-56-removebg-preview.png"
-              alt="Movie"
-            />
-          </div>
-          <div className="w-2/3 pt-3">
-            <p>A good design is not only aesthetically pleasing,but also functional.It should be able to solve the problem.</p>
-          </div>
-        </div>
 
-		<div className=" bg-base-100 flex py-10 px-4">
-		<div className="w-2/3 pt-3">
-            <p>A good design is not only aesthetically pleasing,but also functional.It should be able to solve the problem.</p>
+          <div className="bg-base-100 flex py-10 px-4">
+            <div className="w-2/3 pt-12">
+              <p>A good design is not only aesthetically pleasing,but also functional.It should be able to solve the problem.</p>
+            </div>
+
+            <div className="border-2 h-28 my-16 mx-6 border-slate-500">
+            </div>
+            <div className="w-full px-4">
+              <img
+                src={slides[2].image}
+                alt="Sourav Paul CTO of Unicorniz Innovations"
+                className="rounded-md"
+              />
+              <p className="text-center font-semibold text-lg">Sourav Paul</p>
+              <p className="text-center text-sm text-amber-600 font-bold">CTO</p>
+            </div>
           </div>
-          
-		  <div className="pt-6 px-2">
-            <img
-              src="https://i.ibb.co/0QQn697/Screenshot-56-removebg-preview.png"
-              alt="Movie"
-            />
-          </div>
-		  <div className="w-full">
-            <img
-              src="https://i.ibb.co/cT5zYqQ/userPic1.png"
-              alt="Movie"
-            />
-			<p className="text-center">Sarah Smith</p>
-			<p className="text-center text-sm text-amber-600">Founder</p>
-          </div>
-          
         </div>
-		
-		</div>
       </div>
     </div>
   );

@@ -187,7 +187,7 @@ const Projects = () => {
       <div className="lg:hidden md:hidden">
         <div className="w-96 bg-base-100">
           <div className="pt-4">
-            <p className="items-center text-center font-semibold text-xl">SHOPLIFTY</p>
+            <p className="items-center text-center font-semibold text-xl">VRKshetra</p>
           </div>
           <div className="px-16 pt-2">
             <img
@@ -197,7 +197,7 @@ const Projects = () => {
             />
           </div>
           <div className="items-center text-center py-6">
-            <button className="btn border-black border rounded-full pl-4 pr-4 py-2 ">UX/UI Design.</button>
+            <button className="btn border-black border rounded-full pl-4 pr-4 py-2 ">Product Description</button>
           </div>
           <div className=" items-center text-center text-sm">
             <p>Bringing the history of your brand to the forefront gives an
@@ -210,7 +210,7 @@ const Projects = () => {
 
         <div className="w-96 bg-base-100 ">
           <div className="pt-8">
-            <p className="items-center text-center font-semibold text-xl">VR/AR TECH</p>
+            <p className="items-center text-center font-semibold text-xl">Sublime Islands</p>
           </div>
           <div className="px-16 pt-2">
             <img
@@ -220,7 +220,7 @@ const Projects = () => {
             />
           </div>
           <div className="items-center text-center py-6">
-            <button className="btn border-black border rounded-full pl-4 pr-4 py-2 ">UX/UI Design.</button>
+            <button className="btn border-black border rounded-full pl-4 pr-4 py-2 ">Product Description</button>
           </div>
           <div className=" items-center text-center text-sm">
             <p>Bringing the history of your brand to the forefront gives an
@@ -233,7 +233,7 @@ const Projects = () => {
 
         <div className="w-96 bg-base-100">
           <div className="pt-8">
-            <p className="items-center text-center font-semibold text-xl">SHOPLIFTY</p>
+            <p className="items-center text-center font-semibold text-xl">Bhojan Mitra</p>
           </div>
           <div className="px-16 pt-2">
             <img
@@ -243,7 +243,7 @@ const Projects = () => {
             />
           </div>
           <div className="items-center text-center py-6">
-            <button className="btn border-black border rounded-full pl-4 pr-4 py-2 ">UX/UI Design.</button>
+            <button className="btn border-black border rounded-full pl-4 pr-4 py-2 ">Product Description</button>
           </div>
           <div className=" items-center text-center text-sm">
             <p>Bringing the history of your brand to the forefront gives an

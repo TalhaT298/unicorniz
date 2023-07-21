@@ -1,5 +1,5 @@
 import React from "react";
-import BannerImg from "../../../../assets/strategy.png";
+import BannerImg from "../../../../assets/hero.gif";
 import Image from "next/image";
 import withEmailjs from "../../SharedComponents/Hoc/withEmail";
 const Banner = ({ loading, handleSubmit }) => {
@@ -31,7 +31,7 @@ const Banner = ({ loading, handleSubmit }) => {
 				src={BannerImg}
 				alt="Unicorniz"
 				priority
-				className=" hidden md:block  w-full"
+				className="hidden md:block w-2/5 rounded-lg"
 			/>
 		</div>
 	);

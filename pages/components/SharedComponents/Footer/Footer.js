@@ -1,7 +1,7 @@
 import Image from "next/image";
 import logo from "../../../../assets/Unicorniz Logo.jpg";
 import twiter from "../../../../assets/twiter.png";
-import instagram from "../../../../assets/instagram.png";
+import instagram from "../../../../assets/instagram1.png";
 import linkedin from "../../../../assets/linkedin.png";
 import Link from "next/link";
 const Footer = () => {
@@ -43,7 +43,7 @@ const Footer = () => {
       <div className="bg-black h-[92px] md:pr-[165px] md:pl-[145px] py-2 flex md:flex-row sm:flex-col flex-row items-center justify-between">
         {" "}
         <small className="sm:text-[14px] text-[10px] text-[#9E9E9E] pl-4 sm:pl-0">
-          All Rights Reservd Unicorniz Innovations 2023
+          All Rights Reserved Unicorniz Innovations 2023
         </small>
         <div className="flex gap-4 pr-4 sm:pr-0">
           <div className="bg-[#18181C] hover:bg-orange-500 sm:h-10 sm:w-10 flex items-center justify-center rounded-2xl">
@@ -56,9 +56,9 @@ const Footer = () => {
               <Image src={linkedin} alt="icons" />
             </a>
           </div>
-          <div className="bg-[#18181C] hover:bg-orange-500 sm:h-10 sm:w-10 flex items-center justify-center rounded-2xl px-2">
+          <div className="bg-[#18181C] hover:bg-orange-500 sm:h-10 sm:w-10 flex items-center justify-center rounded-2xl">
             <a href="https://www.instagram.com/unicornizinnovations" target="_blank">
-              <Image src={instagram} alt="icons" className="rounded-2xl" />
+              <Image src={instagram} alt="icons" className=""/>
             </a>
           </div>
         </div>
