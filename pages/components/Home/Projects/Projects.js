@@ -59,7 +59,7 @@ const Projects = () => {
           Projects <hr className="w-16 border border-black" />
         </h3>
         <Link href={"/projects"}>
-          <p className="text-[#FF7E21] font-bold cursor-pointer">Know More</p>
+          <p className="text-[#FF7E21] font-bold cursor-pointer text-end">Know More</p>
         </Link>
       </div>
       <div className="flex flex-wrap justify-center md:justify-between gap-[3.9vw] md:mt-[60px] mt-[20px]">

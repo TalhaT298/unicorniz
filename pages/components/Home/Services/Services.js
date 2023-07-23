@@ -8,7 +8,7 @@ const Services = () => {
 					Services <hr className="w-16 border border-black" />
 				</h3>
 				<Link href={"/services"}>
-					<p className="text-[#FF7E21] font-bold cursor-pointer">Know More</p>
+					<p className="text-[#FF7E21] font-bold cursor-pointer text-end">Know More</p>
 				</Link>
 			</div>
 			<div className="flex lg:flex-row flex-col justify-center  gap-[40px] md:mt-[100px] mt-[30px] mx-[10px]">

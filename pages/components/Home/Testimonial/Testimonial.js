@@ -18,18 +18,34 @@ const Testimonial = () => {
 		{
 			id: "1",
 			image: img1.src,
+			name: "Dinesh Lal",
+			review: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptatem molestias reprehenderit! Odio, quibusdam? Odit, vitae praesentium! Deserunt, iusto aliquam?",
+			organization: "Unicorniz Innovations",
+			designation: "CEO & Founder",
 		},
 		{
 			id: "2",
 			image: img2.src,
+			name: "Dinesh Lal",
+			review: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptatem molestias reprehenderit! Odio, quibusdam? Odit, vitae praesentium! Deserunt, iusto aliquam?",
+			organization: "Unicorniz Innovations",
+			designation: "CEO & Founder",
 		},
 		{
 			id: "3",
 			image: img1.src,
+			name: "Dinesh Lal",
+			review: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptatem molestias reprehenderit! Odio, quibusdam? Odit, vitae praesentium! Deserunt, iusto aliquam?",
+			organization: "Unicorniz Innovations",
+			designation: "CEO & Founder",
 		},
 		{
 			id: "2",
 			image: img2.src,
+			name: "Dinesh Lal",
+			review: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptatem molestias reprehenderit! Odio, quibusdam? Odit, vitae praesentium! Deserunt, iusto aliquam?",
+			organization: "Unicorniz Innovations",
+			designation: "CEO & Founder",
 		},
 	];
 	return (
@@ -67,13 +83,11 @@ const Testimonial = () => {
 										<Image className="invisible" src={quotes} alt="quotes" />
 									</div>
 									<div className="items-center justify-center text-sm w-3/4 sm:w-auto">
-										Aut nihil mollitia deserunt quia sed rem. Quibusdam amet
-										veniam rerum id rerum beatae. Quas rerum iste
-										necessitatibus. At voluptates ad magnam blanditiis excepturi
-										expedita aut. Aut repellat inventore qui minima illum est.
+										{item.review}
 									</div>
-									<h6 className="font-semibold mt-5">Kyle Merwin</h6>
-									<small className="text-[14px] text-[#808080]">CO-owner</small>
+									<p className="font-semibold mt-5 text-sm font-serif">{item.name}</p>
+									<p className="font-bold mt-1 font-serif text-sm">{item.organization}</p>
+									<p className="text-[14px] text-[#808080] font-mono text-xs">{item.designation}</p>
 								</div>
 							</div>
 						</div>

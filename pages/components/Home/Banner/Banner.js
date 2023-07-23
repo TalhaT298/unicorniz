@@ -6,15 +6,15 @@ const Banner = ({ loading, handleSubmit }) => {
 	return (
 		<div className="flex justify-between items-center -top-[27px] pt-6">
 			<div>
-				<div className="lg:w-[788px] lg:h-[288px] lg:leading-[107.25px] leading-[60px]">
-					<h1 className="lg:text-[65px] text-[30px]">
+				<div className="xl:w-[788px] lg:w-[600px] lg:h-[288px] lg:leading-[107.25px] leading-[60px]">
+					<h1 className="xl:text-[65px] lg:text-[40px] text-[30px]">
 						Brand.<span className="text-[#6F6F6F]">Design</span>.
 						<span className="text-[#7E7E7E]">Product</span>
 						<span className="text-[#D0D0D0]">.</span><br />In-Hours Development. <br />
 						& More
 					</h1>
 				</div>
-				<p className="my-[3.25vw] md:text-[22px] lg:w-[561px] text-sm sm:leading-[37.4px] leading-[20px]">
+				<p className="my-[3.25vw] lg:w-[561px] text-lg lg:text-2xl md:text-[20px] sm:text-[16px] sm:leading-[37.4px] leading-[20px]">
 					One place to enhance the customer experience <br /> and track your
 					success to make actionable moves
 				</p>
