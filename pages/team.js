@@ -8,9 +8,9 @@ import img2 from "../assets/Image (2).png";
 const Team = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const slides = [
-    { image: img.src, bio: "", name: "Dinesh Lal", designation: "CEO & Founder" },
-    { image: img1.src, bio: "", name: "M Vinod", designation: "COO & Founder" },
-    { image: img2.src, bio: "", name: "Sourav Paul", designation: "CTO" },
+    { image: img.src, bio: "Mr. Sourav Paul is a Full Stack Dev with skills in React, Next and other Js frameworks, also into DevOps, XR, Marketing & also has great experience into other Domains. Currently he is the CTO at Unicorniz Innovations. As a thought leader, he stays abreast of emerging trends, leveraging the latest tools and techniques.", name: "Dinesh Lal", designation: "CEO & Founder" },
+    { image: img1.src, bio: "Mr. Sourav Paul is a Full Stack Dev with skills in React, Next and other Js frameworks, also into DevOps, XR, Marketing & also has great experience into other Domains. Currently he is the CTO at Unicorniz Innovations. As a thought leader, he stays abreast of emerging trends, leveraging the latest tools and techniques.", name: "M Vinod", designation: "COO & Founder" },
+    { image: img2.src, bio: "Mr. Sourav Paul is a Full Stack Dev with skills in React, Next and other Js frameworks, also into DevOps, XR, Marketing & also has great experience into other Domains. Currently he is the CTO at Unicorniz Innovations. As a thought leader, he stays abreast of emerging trends, leveraging the latest tools and techniques.", name: "Sourav Paul", designation: "CTO" },
   ];
   const prevSlide = () => {
     const isFirst = currentIndex === 0;
@@ -71,15 +71,14 @@ const Team = () => {
           <div className="py-8 px-9">
             <h2 className="text-[40px]">{slides[currentIndex].name}</h2>
             <h6 className="text-[18px] text-[#FF7E21]">{slides[currentIndex].designation}</h6>
-            <p className="text-[24px] text-justify mt-5">
+            <p className="text-[14px] text-justify mt-5">
               {slides[currentIndex].bio}
             </p>
           </div>
           <div className="relative">
-            <div className="bg-[#808080] lg:h-[455px] lg:w-[440px] left-9 bottom-0 absolute"></div>
             <img
               src={slides[currentIndex].image}
-              className="z-10 w-[440px] h-[540px] lg:absolute left-9 bottom-0"
+              className="z-10 w-[400px] h-[500px] lg:absolute left-9 bottom-0"
             />
           </div>
         </div>
@@ -102,20 +101,18 @@ const Team = () => {
       <div className="lg:hidden md:hidden">
         <div>
           <div className="bg-base-100 flex py-10 px-4">
-            <div className="w-2/3 pt-12">
-              <p>A good design is not only aesthetically pleasing,but also functional.It should be able to solve the problem.</p>
+            <div className="w-2/3 text-justofy">
+              <p>{slides[0].bio}</p>
             </div>
 
-            <div className="border-2 h-28 my-16 mx-6 border-slate-500">
-            </div>
             <div className="w-full px-4">
               <img
                 src={slides[0].image}
                 alt="Dinesh Lal CEO & Founder of Unicorniz Innovations"
                 className="rounded-md"
               />
-              <p className="text-center font-semibold text-lg">Dinesh Lal</p>
-              <p className="text-center text-sm text-amber-600 font-bold">CEO & Founder</p>
+              <p className="text-center font-semibold text-lg">{slides[0].name}</p>
+              <p className="text-center text-sm text-amber-600 font-bold">{slides[0].designation}</p>
             </div>
           </div>
 
@@ -126,22 +123,17 @@ const Team = () => {
                 alt="M Vinod COO & Founder of Unicorniz Innovations"
                 className="rounded-md"
               />
-              <p className="text-center font-semibold text-lg">M Vinod</p>
-              <p className="text-center text-sm text-amber-600 font-bold">COO & Founder</p>
+              <p className="text-center font-semibold text-lg">{slides[1].name}</p>
+              <p className="text-center text-sm text-amber-600 font-bold">{slides[1].designation}</p>
             </div>
-            <div className="border-2 h-28 my-16 mx-6 border-slate-500">
-            </div>
-            <div className="w-2/3 pt-12">
-              <p>A good design is not only aesthetically pleasing,but also functional.It should be able to solve the problem.</p>
+            <div className="w-2/3 text-justify">
+              <p>{slides[1].bio}</p>
             </div>
           </div>
 
           <div className="bg-base-100 flex py-10 px-4">
-            <div className="w-2/3 pt-12">
-              <p>A good design is not only aesthetically pleasing,but also functional.It should be able to solve the problem.</p>
-            </div>
-
-            <div className="border-2 h-28 my-16 mx-6 border-slate-500">
+            <div className="w-2/3 text-justify">
+              <p>{slides[2].bio}</p>
             </div>
             <div className="w-full px-4">
               <img
@@ -149,8 +141,8 @@ const Team = () => {
                 alt="Sourav Paul CTO of Unicorniz Innovations"
                 className="rounded-md"
               />
-              <p className="text-center font-semibold text-lg">Sourav Paul</p>
-              <p className="text-center text-sm text-amber-600 font-bold">CTO</p>
+              <p className="text-center font-semibold text-lg">{slides[2].name}</p>
+              <p className="text-center text-sm text-amber-600 font-bold">{slides[2].designation}</p>
             </div>
           </div>
         </div>
