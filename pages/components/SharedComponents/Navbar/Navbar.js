@@ -92,7 +92,7 @@ const Navbar = ({ loading, handleSubmit }) => {
 				!hamburger &&
 				<div className="w-[60%] h-screen ease-in-out transition-all duration-5000 lg:hidden flex flex-col absolute p-3 bg-black z-50">
 					<div className="flex flex-row lg:hidden items-end justify-end text-slate-100 w-full" onClick={() => setHamburger((prev) => !prev)}>
-						<div className="w-2/5 mx-auto">
+						<div className="w-2/4 mx-auto">
 							<Link href={"/"}>
 								<Image src={logo} priority alt="logo" className="mt-5 mb-8 mx-auto" />
 							</Link>
