@@ -12,7 +12,7 @@ const poppins = Poppins({
 });
 export default function App({ Component, pageProps }) {
 	return (
-		<main className={`${poppins.variable} font-poppins`}>
+		<main className={`${poppins.variable} font-serif`}>
 			<Navbar />
 			<Component {...pageProps} />
 			<Footer />

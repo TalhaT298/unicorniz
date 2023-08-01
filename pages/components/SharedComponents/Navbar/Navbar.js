@@ -1,39 +1,59 @@
 import { useState } from "react";
 import logo from "../../../../assets/Unicorniz Logo.jpg";
 import Image from "next/image";
-import { HiMenu } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
+import { HiMenu } from "react-icons/hi";
+import { HiHome } from "react-icons/hi";
+import { MdHomeRepairService } from "react-icons/md";
+import { BsBoxes } from "react-icons/bs";
+import { ImWarning } from "react-icons/im";
+import { GiTeamIdea } from "react-icons/gi";
 import Link from "next/link";
 import withEmailjs from "../Hoc/withEmail";
-import PrimaryButton from "../PrimaryButton/PrimaryButton";
+// import PrimaryButton from "../PrimaryButton/PrimaryButton";
 const Navbar = ({ loading, handleSubmit }) => {
 	const [hamburger, setHamburger] = useState(true);
 	const menuItems = (
 		<>
 			<Link href="/">
-				<li tabIndex={0} className=" cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold">
-					Home
-				</li>
+				<div tabIndex={0} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 w-full mb-5 lg:w-auto lg:bg-inherit">
+					<HiHome size={25} className="lg:hidden" color="gray" />
+					<p className="py-1">
+						Home
+					</p>
+				</div>
 			</Link>
 			<Link href={"/services"}>
-				<li tabIndex={1} className=" cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold">
-					Services
-				</li>
+				<div tabIndex={1} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 w-full mb-5 lg:w-auto lg:bg-inherit">
+					<MdHomeRepairService size={26} className="lg:hidden" color="gray" />
+					<p className="py-1">
+						Services
+					</p>
+				</div>
 			</Link>
 			<Link href={"/projects"}>
-				<li tabIndex={2} className=" cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold">
-					Projects
-				</li>
+				<div tabIndex={2} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 w-full mb-5 lg:w-auto lg:bg-inherit">
+					<BsBoxes size={25} className="lg:hidden" color="gray" />
+					<p className="py-1">
+						Projects
+					</p>
+				</div>
 			</Link>
 			<Link href={"/about"}>
-				<li tabIndex={3} className=" cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold">
-					About
-				</li>
+				<div tabIndex={3} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 w-full mb-5 lg:w-auto lg:bg-inherit">
+					<ImWarning size={25} className="lg:hidden" color="gray" />
+					<p className="py-1">
+						About
+					</p>
+				</div>
 			</Link>
 			<Link href={"/team"}>
-				<li tabIndex={4} className=" cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold">
-					Team
-				</li>
+				<div tabIndex={4} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 w-full lg:w-auto lg:bg-inherit">
+					<GiTeamIdea size={25} className="lg:hidden" color="gray" />
+					<p className="py-1">
+						Team
+					</p>
+				</div>
 			</Link>
 		</>
 	);
@@ -42,56 +62,63 @@ const Navbar = ({ loading, handleSubmit }) => {
 		<div className="flex justify-between lg:block relative">
 			<div className="flex justify-between border-b-2 border-zinc-200 items-center h-20 w-full px-5">
 				<Link href={"/"}>
-					<Image src={logo} priority alt="logo" className="h-12 w-full" />
+					<Image src={logo} priority alt="logo" className="h-10 w-full lg:h-12" />
 				</Link>
-				<ul className="lg:flex hidden gap-12 text-slate-600 font-light text-xl">{menuItems}</ul>
+				<ul className="lg:flex hidden gap-12 text-slate-600 text-lg">{menuItems}</ul>
 				{/* <PrimaryButton
 					classes={"lg:block hidden"}
 					disabledProps={loadin}
 					onClickProps={handleSubmit}>
 					Contact Us
 				</PrimaryButton> */}
-				<button className="lg:block hidden bg-black text-white w-32 h-12 font-mono">
+				<button className="lg:block hidden bg-black text-white w-32 h-11 font-mono rounded-lg hover:bg-slate-800">
 					<Link href={"/contactus"}>Contact Us</Link>
 				</button>
-				<div className="lg:hidden block">
-					<div onClick={() => setHamburger((prev) => !prev)}>
-						<HiMenu
-							size={30}
-							className={`${!hamburger && "hidden"}`}
-							cursor={"pointer"}
-						/>
-						<AiOutlineClose
-							size={30}
-							className={`${hamburger && "hidden"} `}
-							cursor={"pointer"}
-						/>
+				<div className="lg:hidden block" onClick={() => setHamburger((prev) => !prev)}>
+					<HiMenu
+						size={20}
+						className={`${!hamburger && "hidden"}`}
+						cursor={"pointer"}
+					/>
+					<AiOutlineClose
+						size={16}
+						className={`${hamburger && "hidden"} `}
+						cursor={"pointer"}
+					/>
+				</div>
+			</div>
+
+			{
+				!hamburger &&
+				<div className="w-[60%] h-screen ease-in-out transition-all duration-5000 lg:hidden flex flex-col absolute p-3 bg-black z-50">
+					<div className="flex flex-row lg:hidden items-end justify-end text-slate-100 w-full" onClick={() => setHamburger((prev) => !prev)}>
+						<div className="w-2/5 mx-auto">
+							<Link href={"/"}>
+								<Image src={logo} priority alt="logo" className="mt-5 mb-8 mx-auto" />
+							</Link>
+						</div>
+					</div>
+					<div className="flex flex-col">
+						<div
+							onClick={() => setHamburger((prev) => !prev)}
+							className="ml-10 text-gray-500 list-none font-sans font-semibold text-sm focus:font-bold hover:text-gray-50 mb-10">
+							{menuItems}
+						</div>
+					</div>
+					<div className="flex flex-col justify-center items-center rounded-3xl bg-neutral-950 space-y-5 mx-5 mt-28">
+						<div className="flex-col text-center mt-2 mx-5 space-x-3 space-y-3">
+							<p className="text-slate-50 font-poppins1 text-sm font-medium mt-2">Let's start</p>
+							<p className="text-zinc-400 font-sans text-sm font-semibold">Get in contact with us to work</p>
+						</div>
+
+						<div>
+							<button className="px-7 py-2.5 bg-orange-500 lg:hidden block text-white font-mono rounded-lg mb-4">
+								<Link href={"/contactus"}>Contact Us</Link>
+							</button>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div
-				className={` ${!hamburger ? "top-16 " : "top-[-400px]"
-					} ease-out transition-all duration-500 lg:hidden flex flex-col absolute right-2 p-3 rounded bg-slate-100 z-50`}>
-				<div className="">
-					{" "}
-					<ul
-						onClick={() => setHamburger((prev) => !prev)}
-						className={`flex flex-col lg:gap-12 gap-2 pb-2 text-[#7f7f7f]`}>
-						{menuItems}
-					</ul>
-				</div>
-				<div className="">
-					{/* <button
-						disabled={loading}
-						onClick={handleSubmit}
-						className="px-8 py-3 bg-black lg:hidden block text-white">
-						Contact Us
-					</button> */}
-					<button className="px-8 py-3 bg-black lg:hidden block text-white font-mono">
-						<Link href={"/contactus"}>Contact Us</Link>
-					</button>
-				</div>
-			</div>
+			}
 		</div>
 	);
 };
