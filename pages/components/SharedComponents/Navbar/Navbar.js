@@ -1,5 +1,6 @@
 import { useState } from "react";
-import logo from "../../../../assets/Unicorniz Logo.jpg";
+import logo from "../../../../assets/Unicorniz Logo White.png";
+import logo1 from "../../../../assets/Unicorniz Logo Black.png";
 import Image from "next/image";
 import { AiOutlineClose } from "react-icons/ai";
 import { HiMenu } from "react-icons/hi";
@@ -15,43 +16,43 @@ const Navbar = ({ loading, handleSubmit }) => {
 	const [hamburger, setHamburger] = useState(true);
 	const menuItems = (
 		<>
-			<Link href="/">
-				<div tabIndex={0} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 w-full mb-5 lg:w-auto lg:bg-inherit">
-					<HiHome size={25} className="lg:hidden" color="gray" />
+			<Link href={"/about"}>
+				<div tabIndex={1} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 w-full mb-5 lg:w-auto lg:bg-inherit">
+					<ImWarning size={25} className="lg:hidden" color="gray" />
 					<p className="py-1">
-						Home
+						About us
 					</p>
 				</div>
 			</Link>
 			<Link href={"/services"}>
-				<div tabIndex={1} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 w-full mb-5 lg:w-auto lg:bg-inherit">
+				<div tabIndex={2} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 w-full mb-5 lg:w-auto lg:bg-inherit">
 					<MdHomeRepairService size={26} className="lg:hidden" color="gray" />
 					<p className="py-1">
 						Services
 					</p>
 				</div>
 			</Link>
-			<Link href={"/projects"}>
-				<div tabIndex={2} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 w-full mb-5 lg:w-auto lg:bg-inherit">
+			<Link href={"/products"}>
+				<div tabIndex={3} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 w-full mb-5 lg:w-auto lg:bg-inherit">
 					<BsBoxes size={25} className="lg:hidden" color="gray" />
 					<p className="py-1">
-						Projects
+						Products
 					</p>
 				</div>
 			</Link>
-			<Link href={"/about"}>
-				<div tabIndex={3} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 w-full mb-5 lg:w-auto lg:bg-inherit">
-					<ImWarning size={25} className="lg:hidden" color="gray" />
-					<p className="py-1">
-						About
-					</p>
-				</div>
-			</Link>
-			<Link href={"/team"}>
-				<div tabIndex={4} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 w-full lg:w-auto lg:bg-inherit">
+			<Link href={"/blogs"}>
+				<div tabIndex={4} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 w-full mb-5 lg:w-auto lg:bg-inherit">
 					<GiTeamIdea size={25} className="lg:hidden" color="gray" />
 					<p className="py-1">
-						Team
+						Blogs
+					</p>
+				</div>
+			</Link>
+			<Link href={"/events"}>
+				<div tabIndex={5} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 w-full lg:w-auto lg:bg-inherit">
+					<GiTeamIdea size={25} className="lg:hidden" color="gray" />
+					<p className="py-1">
+						Events
 					</p>
 				</div>
 			</Link>
@@ -60,7 +61,7 @@ const Navbar = ({ loading, handleSubmit }) => {
 
 	return (
 		<div className="flex justify-between lg:block relative">
-			<div className="flex justify-between border-b-2 border-zinc-200 items-center h-20 w-full px-5">
+			<div className="flex justify-between shadow-lg items-center h-20 w-full px-5">
 				<Link href={"/"}>
 					<Image src={logo} priority alt="logo" className="h-10 w-full lg:h-12" />
 				</Link>
@@ -71,7 +72,7 @@ const Navbar = ({ loading, handleSubmit }) => {
 					onClickProps={handleSubmit}>
 					Contact Us
 				</PrimaryButton> */}
-				<button className="lg:block hidden bg-black text-white w-32 h-11 font-mono rounded-lg hover:bg-slate-800">
+				<button className="lg:block hidden [background:linear-gradient(225deg,_#6675f7,_#57007b)] text-white w-32 h-11 font-mono rounded-lg hover:bg-slate-800">
 					<Link href={"/contactus"}>Contact Us</Link>
 				</button>
 				<div className="lg:hidden block" onClick={() => setHamburger((prev) => !prev)}>
@@ -90,11 +91,11 @@ const Navbar = ({ loading, handleSubmit }) => {
 
 			{
 				!hamburger &&
-				<div className="w-[60%] h-screen ease-in-out transition-all duration-5000 lg:hidden flex flex-col absolute p-3 bg-black z-50">
+				<div className="w-[60%] h-screen ease-in-out transition-all duration-5000 lg:hidden flex flex-col absolute bg-black z-50">
 					<div className="flex flex-row lg:hidden items-end justify-end text-slate-100 w-full" onClick={() => setHamburger((prev) => !prev)}>
 						<div className="w-3/5 mx-auto">
 							<Link href={"/"}>
-								<Image src={logo} priority alt="logo" className="mt-5 mb-8 mx-auto" />
+								<Image src={logo1} priority alt="logo" className="mt-5 mb-8 mx-auto" />
 							</Link>
 						</div>
 					</div>

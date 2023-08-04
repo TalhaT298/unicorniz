@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../../../../assets/Unicorniz Logo.jpg";
+import logo from "../../../../assets/Unicorniz Logo Black.png";
 import twiter from "../../../../assets/twiter.png";
 import instagram from "../../../../assets/instagram1.png";
 import linkedin from "../../../../assets/linkedin.png";
@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer>
       <div
-        className="bg-[#0D0D0D] w-full min-h-[268px] lg:flex px-10 lg:px-[165px] flex md:flex-row flex-col justify-between items-center"
+        className="bg-[#000000] w-full min-h-[268px] lg:flex px-10 lg:px-[165px] flex md:flex-row flex-col justify-between items-center"
       >
         <div className="flex flex-col w-auto md:w-full">
           <Image src={logo} className="w-40 pt-5" alt="logo" />{" "}
