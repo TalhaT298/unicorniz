@@ -93,16 +93,16 @@ const Navbar = ({ loading, handleSubmit }) => {
 				!hamburger &&
 				<div className="w-[60%] h-screen ease-in-out transition-all duration-5000 lg:hidden flex flex-col absolute bg-black z-50">
 					<div className="flex flex-row lg:hidden items-end justify-end text-slate-100 w-full" onClick={() => setHamburger((prev) => !prev)}>
-						<div className="w-3/5 mx-auto">
+						<div className="w-4/5 mx-auto">
 							<Link href={"/"}>
-								<Image src={logo1} priority alt="logo" className="mt-5 mb-8 mx-auto" />
+								<Image src={logo1} priority alt="logo" className="mt-10 mb-8 mx-auto" />
 							</Link>
 						</div>
 					</div>
 					<div className="flex flex-col">
 						<div
 							onClick={() => setHamburger((prev) => !prev)}
-							className="ml-10 text-gray-500 list-none font-sans font-semibold text-sm focus:font-bold hover:text-gray-50 mb-10">
+							className="ml-10 text-gray-500 list-none font-sans font-semibold text-sm focus:font-bold hover:text-gray-50 mt-10 mb-10">
 							{menuItems}
 						</div>
 					</div>
