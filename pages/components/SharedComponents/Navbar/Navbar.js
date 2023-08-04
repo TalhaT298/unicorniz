@@ -76,12 +76,12 @@ const Navbar = ({ loading, handleSubmit }) => {
 				</button>
 				<div className="lg:hidden block" onClick={() => setHamburger((prev) => !prev)}>
 					<HiMenu
-						size={20}
+						size={24}
 						className={`${!hamburger && "hidden"}`}
 						cursor={"pointer"}
 					/>
 					<AiOutlineClose
-						size={16}
+						size={24}
 						className={`${hamburger && "hidden"} `}
 						cursor={"pointer"}
 					/>
