@@ -4,11 +4,10 @@ import logo1 from "../../../../assets/Unicorniz Logo Black.png";
 import Image from "next/image";
 import { AiOutlineClose } from "react-icons/ai";
 import { HiMenu } from "react-icons/hi";
-import { HiHome } from "react-icons/hi";
 import { MdHomeRepairService } from "react-icons/md";
 import { BsBoxes } from "react-icons/bs";
-import { ImWarning } from "react-icons/im";
-import { GiTeamIdea } from "react-icons/gi";
+import { ImWarning, ImBlogger2 } from "react-icons/im";
+import { GiPartyPopper } from "react-icons/gi";
 import Link from "next/link";
 import withEmailjs from "../Hoc/withEmail";
 // import PrimaryButton from "../PrimaryButton/PrimaryButton";
@@ -17,41 +16,41 @@ const Navbar = ({ loading, handleSubmit }) => {
 	const menuItems = (
 		<>
 			<Link href={"/about"}>
-				<div tabIndex={1} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 w-full mb-5 lg:w-auto lg:bg-inherit">
+				<div tabIndex={1} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 py-3 w-full mb-5 lg:w-auto lg:bg-inherit">
 					<ImWarning size={25} className="lg:hidden" color="gray" />
-					<p className="py-1">
+					<p className="">
 						About us
 					</p>
 				</div>
 			</Link>
 			<Link href={"/services"}>
-				<div tabIndex={2} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 w-full mb-5 lg:w-auto lg:bg-inherit">
+				<div tabIndex={2} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 py-3 w-full mb-5 lg:w-auto lg:bg-inherit">
 					<MdHomeRepairService size={26} className="lg:hidden" color="gray" />
-					<p className="py-1">
+					<p className="">
 						Services
 					</p>
 				</div>
 			</Link>
 			<Link href={"/products"}>
-				<div tabIndex={3} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 w-full mb-5 lg:w-auto lg:bg-inherit">
+				<div tabIndex={3} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 py-3 w-full mb-5 lg:w-auto lg:bg-inherit">
 					<BsBoxes size={25} className="lg:hidden" color="gray" />
-					<p className="py-1">
+					<p className="">
 						Products
 					</p>
 				</div>
 			</Link>
 			<Link href={"/blogs"}>
-				<div tabIndex={4} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 w-full mb-5 lg:w-auto lg:bg-inherit">
-					<GiTeamIdea size={25} className="lg:hidden" color="gray" />
-					<p className="py-1">
+				<div tabIndex={4} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 py-3 w-full mb-5 lg:w-auto lg:bg-inherit">
+					<ImBlogger2 size={25} className="lg:hidden" color="gray" />
+					<p className="">
 						Blogs
 					</p>
 				</div>
 			</Link>
 			<Link href={"/events"}>
-				<div tabIndex={5} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 w-full lg:w-auto lg:bg-inherit">
-					<GiTeamIdea size={25} className="lg:hidden" color="gray" />
-					<p className="py-1">
+				<div tabIndex={5} className="flex flex-row cursor-pointer focus:text-black focus:font-bold hover:text-slate-950 hover:font-bold gap-5 py-3 w-full lg:w-auto lg:bg-inherit">
+					<GiPartyPopper size={25} className="lg:hidden" color="gray" />
+					<p className="">
 						Events
 					</p>
 				</div>
@@ -102,7 +101,7 @@ const Navbar = ({ loading, handleSubmit }) => {
 					<div className="flex flex-col">
 						<div
 							onClick={() => setHamburger((prev) => !prev)}
-							className="ml-10 text-gray-500 list-none font-sans font-semibold text-sm focus:font-bold hover:text-gray-50 mt-10 mb-10">
+							className="ml-10 text-gray-500 list-none font-sans font-semibold text-md focus:font-bold hover:text-gray-50 mt-10 mb-10">
 							{menuItems}
 						</div>
 					</div>
