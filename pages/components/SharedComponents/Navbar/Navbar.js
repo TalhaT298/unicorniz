@@ -64,7 +64,7 @@ const Navbar = ({ loading, handleSubmit }) => {
 				<Link href={"/"}>
 					<Image src={logo} priority alt="logo" className="h-10 w-full lg:h-12" />
 				</Link>
-				<ul className="lg:flex hidden gap-12 text-slate-600 text-lg">{menuItems}</ul>
+				<ul className="lg:flex hidden gap-12 text-slate-600 text-lg mt-5">{menuItems}</ul>
 				{/* <PrimaryButton
 					classes={"lg:block hidden"}
 					disabledProps={loadin}

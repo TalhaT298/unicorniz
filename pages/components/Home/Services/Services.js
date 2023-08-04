@@ -1,4 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
+import ARVR from "../../../../assets/AR-VR.gif"
+import ITServices from "../../../../assets/IT-Services.gif"
+import DM from "../../../../assets/Digital-Marketing.gif"
 
 const Services = () => {
 	return (
@@ -13,6 +17,7 @@ const Services = () => {
 			</div>
 			<div className="flex lg:flex-row flex-col justify-center  gap-[40px] md:mt-[100px] mt-[30px] mx-[10px]">
 				<div className="lg:w-[396px]">
+					<Image src={ARVR} priority alt="AR VR Services Gif" className="w-full lg:w-[396px]" />
 					<h4 className="sm:text-[32px] pb-8 sm:pb-0 text-[20px]">Integration of AR/VR</h4>
 					<p className="sm:text-[16px] sm:text-justify text-sm">
 						Bringing the history of your brand to the forefront gives an
@@ -21,6 +26,7 @@ const Services = () => {
 					</p>
 				</div>
 				<div className="lg:w-[396px]">
+					<Image src={ITServices} priority alt="IT Services Gif" className="w-full lg:w-[396px]" />
 					<h4 className="sm:text-[32px] pb-8 sm:pb-0 text-[20px]">IT Services</h4>
 					<p className="sm:text-[16px] sm:text-justify text-sm">
 						Bringing the history of your brand to the forefront gives
@@ -29,6 +35,7 @@ const Services = () => {
 					</p>
 				</div>
 				<div className="lg:w-[396px]">
+					<Image src={DM} priority alt="IT Services Gif" className="w-full lg:w-[396px]" />
 					<h4 className="sm:text-[32px] pb-8 sm:pb-0 text-[20px]">Digital Marketing</h4>
 					<p className="sm:text-[16px] sm:text-justify text-sm">
 						Bringing the history of your brand to the forefront gives
