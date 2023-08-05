@@ -60,9 +60,9 @@ const Navbar = ({ loading, handleSubmit }) => {
 
 	return (
 		<div className="flex justify-between lg:block relative">
-			<div className="flex justify-between shadow-lg items-center h-20 w-full px-5">
+			<div className="flex justify-between shadow-lg items-center h-[70px] w-full px-5">
 				<Link href={"/"}>
-					<Image src={logo} priority alt="logo" className="h-10 w-full lg:h-12" />
+					<Image src={logo} priority alt="logo" className="h-10 w-full" />
 				</Link>
 				<ul className="lg:flex hidden gap-12 text-slate-600 text-lg mt-5">{menuItems}</ul>
 				{/* <PrimaryButton

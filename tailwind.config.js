@@ -15,6 +15,7 @@ module.exports = {
       },
       fontFamily: {
         poppins1: ['var(--font-poppins)'],
+        inter: ['var(--font-inter)'],
       }
     },
   },
