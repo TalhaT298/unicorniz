@@ -36,3 +36,4 @@ const Banner = ({ loading, handleSubmit }) => {
 };
 
 export default withEmailjs(Banner);
+
